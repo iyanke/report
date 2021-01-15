@@ -44,7 +44,7 @@ project {
 object Config : BuildType({
     name = "config"
 
-    artifactRules = "index.html"
+    artifactRules = "**/index.html"
 
     vcs {
         root(HttpsGithubComIyankeBigdataRefsHeadsMaster)
