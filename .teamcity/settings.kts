@@ -38,6 +38,11 @@ project {
             title = "Report"
             startPage = "index.html"
         }
+        buildReportTab {
+            id = "PROJECT_EXT_117"
+            title = "Report2"
+            startPage = "android/index.html"
+        }
     }
 }
 
