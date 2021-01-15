@@ -35,7 +35,7 @@ project {
     features {
         buildReportTab {
             id = "PROJECT_EXT_113"
-            title = "Report"
+            title = "Report1"
             startPage = "index.html"
         }
         buildReportTab {
