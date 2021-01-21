@@ -1,5 +1,7 @@
 import jetbrains.buildServer.configs.kotlin.v2019_2.*
+import jetbrains.buildServer.configs.kotlin.v2019_2.projectFeatures.ProjectReportTab
 import jetbrains.buildServer.configs.kotlin.v2019_2.projectFeatures.buildReportTab
+import jetbrains.buildServer.configs.kotlin.v2019_2.projectFeatures.projectReportTab
 import jetbrains.buildServer.configs.kotlin.v2019_2.vcs.GitVcsRoot
 
 /*
@@ -33,6 +35,13 @@ project {
     buildType(Config)
 
     features {
+        projectReportTab {
+            id = "PROJECT_EXT_115"
+            title = "report2"
+            startPage = "index.html"
+            buildType = "${Config.id}"
+            sourceBuildRule = ProjectReportTab.SourceBuildRule.LAST_SUCCESSFUL
+        }
         buildReportTab {
             id = "PROJECT_EXT_117"
             title = "Report2"
