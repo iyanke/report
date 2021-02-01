@@ -61,7 +61,7 @@ object Config : BuildType({
 
     dependencies {
         artifacts(AbsoluteId("Tw69442_A")) {
-            buildRule = sameChainOrLastFinished()
+            buildRule = LastFinished()
             artifactRules = "**"
         }
     }
