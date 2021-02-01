@@ -58,6 +58,13 @@ object Config : BuildType({
     vcs {
         root(HttpsGithubComIyankeBigdataRefsHeadsMaster)
     }
+
+    dependencies {
+        artifacts(AbsoluteId("Tw69442_A")) {
+            buildRule = lastSuccessful()
+            artifactRules = "**"
+        }
+    }
 })
 
 object HttpsGithubComIyankeBigdataRefsHeadsMaster : GitVcsRoot({
