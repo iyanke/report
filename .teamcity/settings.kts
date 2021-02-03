@@ -36,6 +36,12 @@ project {
 
     features {
         projectReportTab {
+            id = "PROJECT_EXT_113"
+            title = "dd"
+            buildType = "${Config.id}"
+            sourceBuildRule = ProjectReportTab.SourceBuildRule.LAST_SUCCESSFUL
+        }
+        projectReportTab {
             id = "PROJECT_EXT_115"
             title = "report2"
             startPage = "index.html"
