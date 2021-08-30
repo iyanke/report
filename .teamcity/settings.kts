@@ -1,4 +1,5 @@
 import jetbrains.buildServer.configs.kotlin.v2019_2.*
+import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.v2019_2.projectFeatures.ProjectReportTab
 import jetbrains.buildServer.configs.kotlin.v2019_2.projectFeatures.buildReportTab
 import jetbrains.buildServer.configs.kotlin.v2019_2.projectFeatures.projectReportTab
@@ -26,7 +27,7 @@ To debug in IntelliJ Idea, open the 'Maven Projects' tool window (View
 'Debug' option is available in the context menu for the task.
 */
 
-version = "2020.2"
+version = "2021.1"
 
 project {
 
@@ -65,6 +66,12 @@ object Config : BuildType({
         root(HttpsGithubComIyankeBigdataRefsHeadsMaster)
     }
 
+    steps {
+        script {
+            scriptContent = "hh"
+        }
+    }
+
     dependencies {
         artifacts(AbsoluteId("Tw69442_A")) {
             buildRule = lastFinished()
@@ -81,4 +88,5 @@ object HttpsGithubComIyankeBigdataRefsHeadsMaster : GitVcsRoot({
         userName = "iyanke"
         password = "credentialsJSON:7c44fbf5-6ed1-4ecb-ac02-060f37b97bf7"
     }
+    param("useAlternates", "true")
 })
